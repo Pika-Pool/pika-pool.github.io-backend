@@ -5,10 +5,15 @@ const cors = require('cors');
 
 const app = express();
 
-const whitelist = process.env.CORS_WHITELIST.split(',');
+const whitelist = process.env.CORS_WHITELIST.split(',').map(
+	url => new URL(url)
+);
 const corsOptions = {
 	origin: (origin, cb) => {
-		if (whitelist[0] === '*' || whitelist.indexOf(origin) !== -1)
+		if (
+			whitelist[0] === '*' ||
+			whitelist.findIndex(url => origin === url.origin) !== -1
+		)
 			cb(null, true);
 		else cb(new Error('CORS not allowed'));
 	},
