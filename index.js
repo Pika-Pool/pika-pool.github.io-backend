@@ -42,6 +42,7 @@ app.post('/contact', (req, res) => {
 	) {
 		messages.push({ name, email, message });
 		res.send();
+		return;
 	}
 
 	res
