@@ -1,0 +1,20 @@
+{
+	"name": "backend",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon index.js",
+		"start": "node index.js"
+	},
+	"keywords": [],
+	"author": "PikaPool <https://www.github.com/Pika-Pool>",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"dotenv-safe": "^8.2.0"
+	}
+}
