@@ -2,19 +2,31 @@
 	"name": "backend",
 	"version": "0.0.1",
 	"description": "",
-	"main": "index.js",
+	"main": "src/index.ts",
 	"scripts": {
-		"dev": "nodemon index.js",
-		"start": "node index.js"
+		"prestart": "tsc",
+		"dev": "nodemon src/index.ts",
+		"start": "node dist/index.js"
 	},
 	"keywords": [],
 	"author": "PikaPool <https://www.github.com/Pika-Pool>",
 	"license": "MIT",
+	"engines": {
+		"node": "16.13.1"
+	},
 	"dependencies": {
 		"cors": "^2.8.5",
-		"express": "^4.17.1"
+		"express": "^4.17.2",
+		"googleapis": "^92.0.0"
 	},
 	"devDependencies": {
-		"dotenv-safe": "^8.2.0"
+		"@types/cors": "^2.8.12",
+		"@types/dotenv-safe": "^8.1.2",
+		"@types/express": "^4.17.13",
+		"@types/node": "^16.11.17",
+		"dotenv-safe": "^8.2.0",
+		"prettier": "^2.5.1",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.4"
 	}
 }
